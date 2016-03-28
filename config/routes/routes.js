@@ -15,11 +15,11 @@ router.route('/api/questions/:id')
  .put(questionsController.update)
  .delete(questionsController.delete);
 
- router.route('/api/users')
+router.route('/api/users')
  .get(usersController.index)
  .post(usersController.add);
 
- router.route('/api/users/:id')
- put(usersController.update);
+router.route('/api/users/:id')
+ .put(usersController.update);
 
 module.exports = router;
