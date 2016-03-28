@@ -1,5 +1,6 @@
 var router = require('express').Router();
 var questionsController = require('../../controllers/questions');
+var usersController = require('../../controllers/users');
 
 
 router.route('/')
@@ -13,5 +14,12 @@ router.route('/api/questions/:id')
  .get(questionsController.show)
  .put(questionsController.update)
  .delete(questionsController.delete);
+
+ router.route('/api/users')
+ .get(usersController.index)
+ .post(usersController.add);
+
+ router.route('/api/users/:id')
+ put(usersController.update);
 
 module.exports = router;
