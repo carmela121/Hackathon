@@ -1,3 +1,3 @@
 module.exports = {
- uri: 'mongodb://localhost/angular-auth'
+ uri: process.env.MONGOLAB_URI || 'mongodb://localhost/hackthon'
 }
