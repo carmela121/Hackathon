@@ -1,1 +1,1 @@
-web: node db/seeds.js && node app.js
+web: node config/seeds.js && node app.js
