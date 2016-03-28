@@ -7,6 +7,7 @@ var bodyParser    = require('body-parser');
 var cors          = require('cors');
 var router        = require('./config/routes/routes');
 var db            = require('./config/database');
+var expressLayouts = require('express-ejs-layouts')
 
 mongoose.connect(db.uri);
 
@@ -15,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/api', router);
+app.use('/', router);
 
 app.listen(port, function() {
  console.log("Express is listening on port " + port);

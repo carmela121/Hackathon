@@ -1,5 +1,9 @@
 var Question = require('../models/question');
 
+function questionsHome(req, res) {
+  return res.render('index')
+}
+
 function questionsIndex(req, res) {
  Question.find(function(err, questions) {
    if(err) return res.status(500).json({ message: err });
@@ -39,5 +43,6 @@ module.exports = {
  show: questionsShow,
  update: questionsUpdate,
  delete: questionsDelete,
- add: questionAdd
+ add: questionAdd,
+ home: questionsHome
 };
