@@ -20,9 +20,16 @@ function usersUpdate(req, res) {
    return res.status(200).json(user);
  });
 }
+function usersDelete(req, res) {
+ User.findByIdAndRemove(req.params.id, function(err) {
+   if(err) return res.status(500).json({ message: err });
+   return res.status(204).send();
+ });
+}
 
 module.exports = {
  index: usersIndex,
  update: usersUpdate,
- add: userAdd
+ add: userAdd,
+ delete: userDelete
 };
