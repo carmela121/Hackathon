@@ -20,6 +20,7 @@ router.route('/api/users')
  .post(usersController.add);
 
 router.route('/api/users/:id')
- .put(usersController.update);
+ .put(usersController.update)
+ .delete(usersController.delete);
 
 module.exports = router;
