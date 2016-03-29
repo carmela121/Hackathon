@@ -31,5 +31,5 @@ module.exports = {
  index: usersIndex,
  update: usersUpdate,
  add: userAdd,
- delete: userDelete
+ delete: usersDelete
 };
